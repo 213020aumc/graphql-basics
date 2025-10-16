@@ -14,7 +14,7 @@ It's the perfect starting point for learning schema design, type-safe resolvers,
   - [📋 Table of Contents](#-table-of-contents)
   - [✨ Features](#-features)
   - [🛠️ Technology Stack](#️-technology-stack)
-    - [Development \& Build Tools](#development--build-tools)
+      - [Development \& Build Tools](#development--build-tools)
   - [📁 Project Structure](#-project-structure)
   - [🚀 Getting Started](#-getting-started)
     - [Prerequisites](#prerequisites)
@@ -26,6 +26,7 @@ It's the perfect starting point for learning schema design, type-safe resolvers,
     - [1. Basic Queries](#1-basic-queries)
     - [2. Relational \& Filtered Queries](#2-relational--filtered-queries)
     - [3. Mutations](#3-mutations)
+  - [📚 License](#-license)
 
 ---
 
@@ -279,3 +280,6 @@ mutation CreateNewComment {
   }
 }
 ```
+## 📚 License
+
+This project is licensed under the [MIT License](LICENSE).
