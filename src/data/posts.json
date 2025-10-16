@@ -1,0 +1,37 @@
+[
+  {
+    "id": "1",
+    "title": "Understanding JavaScript Closures",
+    "body": "Closures are a powerful feature in JavaScript that allow functions to retain access to their lexical scope even when executed outside of it.",
+    "published": true,
+    "authorId": "101"
+  },
+  {
+    "id": "2",
+    "title": "Getting Started with GraphQL",
+    "body": "GraphQL is a query language for APIs that provides a more efficient, powerful, and flexible alternative to REST.",
+    "published": true,
+    "authorId": "102"
+  },
+  {
+    "id": "3",
+    "title": "Why TypeScript Improves Developer Productivity",
+    "body": "TypeScript adds static typing to JavaScript, helping developers catch errors early and write more maintainable code.",
+    "published": false,
+    "authorId": "101"
+  },
+  {
+    "id": "4",
+    "title": "Deploying Node.js Apps with Docker",
+    "body": "Docker simplifies the deployment process by packaging your Node.js application and its dependencies into a container.",
+    "published": true,
+    "authorId": "103"
+  },
+  {
+    "id": "5",
+    "title": "Exploring ES Modules in Node.js",
+    "body": "ES Modules offer a standardized module system in JavaScript, and Node.js now supports them natively with .mjs and import/export syntax.",
+    "published": false,
+    "authorId": "102"
+  }
+]

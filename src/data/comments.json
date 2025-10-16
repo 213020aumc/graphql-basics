@@ -1,0 +1,32 @@
+[
+  {
+    "id": "1",
+    "text": "Great breakdown of closures — I finally understand how scope works in JavaScript!",
+    "commentAuthorId": "101",
+    "postId": "1"
+  },
+  {
+    "id": "2",
+    "text": "Thanks for the intro to GraphQL. I was confused about queries vs mutations, but this helped a lot.",
+    "commentAuthorId": "102",
+    "postId": "2"
+  },
+  {
+    "id": "3",
+    "text": "I’ve been using TypeScript for a few months now and totally agree — it catches so many bugs early.",
+    "commentAuthorId": "103",
+    "postId": "3"
+  },
+  {
+    "id": "4",
+    "text": "Dockerizing my Node.js app was easier than I thought. Appreciate the step-by-step guide!",
+    "commentAuthorId": "104",
+    "postId": "4"
+  },
+  {
+    "id": "5",
+    "text": "ES Modules still confuse me a bit, especially with older packages. Any tips for smoother migration?",
+    "commentAuthorId": "105",
+    "postId": "5"
+  }
+]

@@ -1,0 +1,33 @@
+{
+  "name": "graphql-basics",
+  "version": "1.0.0",
+  "description": "",
+  "main": "dist/src/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "watch:ts": "tsc -w",
+    "clean": "rimraf dist",
+    "watch:data": "cpy \"data/**/*.json\" dist/data --parents --watch",
+    "build": "npm run clean && tsc && npm run watch:data",
+    "start": "npm run build && node ./dist/index.js",
+    "server": "concurrently \"npm:watch:ts\" \"npm:watch:data\" \"nodemon ./dist/index.js\""
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "type": "module",
+  "dependencies": {
+    "@apollo/server": "^5.0.0",
+    "concurrently": "^9.2.1",
+    "fs": "^0.0.1-security",
+    "graphql": "^16.11.0",
+    "graphql-yoga": "^5.16.0",
+    "rimraf": "^6.0.1",
+    "uuid": "^13.0.0"
+  },
+  "devDependencies": {
+    "@types/node": "^24.7.2",
+    "cpy-cli": "^6.0.0",
+    "typescript": "^5.9.3"
+  }
+}
