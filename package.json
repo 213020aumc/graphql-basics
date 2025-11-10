@@ -7,10 +7,16 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "watch:ts": "tsc -w",
     "clean": "rimraf dist",
-    "watch:data": "cpy \"data/**/*.json\" dist/data --parents --watch",
-    "build": "npm run clean && tsc && npm run watch:data",
-    "start": "npm run build && node ./dist/index.js",
-    "server": "concurrently \"npm:watch:ts\" \"npm:watch:data\" \"nodemon ./dist/index.js\""
+    "watch:data": "cpy \"src/data/**/*.json\" dist/data --parents --watch",
+    "copy:data": "cpy \"src/data/**/*.json\" dist/data --parents",
+    "copy:schema": "cpy \"src/schema.graphql\" dist",
+    "build": "npm run clean && tsc && npm run copy:data && npm run copy:schema",
+    "start": "npm run build && node ./dist/src/index.js",
+    "dev": "concurrently \"npm:watch:ts\" \"npm:watch:data\" \"node -r dotenv/config --watch ./dist/src/index.js\"",
+    "server": "npm run dev",
+    "prisma:generate": "prisma generate",
+    "prisma:migrate": "prisma migrate dev",
+    "prisma:studio": "prisma studio"
   },
   "keywords": [],
   "author": "",
@@ -18,16 +24,28 @@
   "type": "module",
   "dependencies": {
     "@apollo/server": "^5.0.0",
+    "@prisma/client": "^6.19.0",
     "concurrently": "^9.2.1",
+    "dotenv": "^8.2.0",
     "fs": "^0.0.1-security",
     "graphql": "^16.11.0",
+    "graphql-subscriptions": "^3.0.0",
     "graphql-yoga": "^5.16.0",
+    "node-fetch": "^3.3.2",
     "rimraf": "^6.0.1",
     "uuid": "^13.0.0"
   },
   "devDependencies": {
     "@types/node": "^24.7.2",
     "cpy-cli": "^6.0.0",
+    "nodemon": "^3.1.10",
+    "prisma": "^6.19.0",
     "typescript": "^5.9.3"
+  },
+  "nodemonConfig": {
+    "watch": [
+      "dist"
+    ],
+    "ext": "js,graphql"
   }
 }

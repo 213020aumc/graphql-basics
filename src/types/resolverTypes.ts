@@ -1,6 +1,14 @@
 // src/types/resolverTypes.ts
 
-type ResolverContext = {}; // Add auth/session if needed
+type ResolverContext = {
+  users: import("./user").User[];
+  posts: import("./post").Post[];
+  comments: import("./comment").Comment[];
+  pubsub: import("./appContext").PubSubLike;
+  saveUsers: () => void;
+  savePosts: () => void;
+  saveComments: () => void;
+}; // Add auth/session if needed
 
 type GreetingArgs = { name?: string };
 type UserArgs = { query?: string };
