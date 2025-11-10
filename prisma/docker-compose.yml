@@ -1,0 +1,27 @@
+services:
+  db:
+    image: postgres:1
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: 1234
+      POSTGRES_DB: graphql
+    ports:
+      - "5432:5432"
+    volumes:
+      - db_data:/var/lib/postgresql
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U postgres -d graphql"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+      start_period: 5s
+
+volumes:
+  db_data: {}
+# --- IGNORE ---
+# This docker-compose file sets up a PostgreSQL database for use with Prisma in a GraphQL application.
+# It defines a single service 'db' that uses the latest PostgreSQL image, sets environment variables for the database user, password, and name,
+# maps the default PostgreSQL port 5432 to the host machine, and uses a Docker volume to persist database data.
+# Make sure to run 'docker-compose up -d' to start the database service before connecting Prisma to it.
+# docker volume inspect db_data
+# --- IGNORE ---

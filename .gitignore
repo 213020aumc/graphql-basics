@@ -4,3 +4,5 @@
 
 logs
 *.log
+.env
+/src/generated/prisma
